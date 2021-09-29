@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-09-29T22:23:15.820Z",
+    "end": "2021-09-29T22:23:34.969Z",
+    "duration": 19149,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e6e08a60-4c6d-4adb-857e-e914e8aff657",
+      "title": "",
+      "fullFile": "cypress/integration/herokuDeploy.spec.js",
+      "file": "cypress/integration/herokuDeploy.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "03b8c586-5db7-409d-bc33-ea437ead93e8",
+          "title": "1 - Verifica se foi feito o deploy do frontend no Heroku",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que o botão de mudar de realidade existe",
+              "fullTitle": "1 - Verifica se foi feito o deploy do frontend no Heroku Será validado que o botão de mudar de realidade existe",
+              "timedOut": null,
+              "duration": 3064,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".change-reality\").should(\"exist\");",
+              "err": {},
+              "uuid": "346691ba-6ecd-49d2-b134-3b4c8d2eb3c9",
+              "parentUUID": "03b8c586-5db7-409d-bc33-ea437ead93e8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a pesquisa funciona como deveria",
+              "fullTitle": "1 - Verifica se foi feito o deploy do frontend no Heroku Será validado que a pesquisa funciona como deveria",
+              "timedOut": null,
+              "duration": 1910,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(PESQUISAR).click();\ncy.contains(MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "99157ef7-30a6-44cc-ac3f-5fec0cf584b0",
+              "parentUUID": "03b8c586-5db7-409d-bc33-ea437ead93e8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que o botão de mudar de realidade funciona.",
+              "fullTitle": "1 - Verifica se foi feito o deploy do frontend no Heroku Será validado que o botão de mudar de realidade funciona.",
+              "timedOut": null,
+              "duration": 10804,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"Mudar de Realidade\").click();\ncy.contains(PESQUISAR).click();\ncy.contains(INVERTED_MARTIN).should(\"exist\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'uᴉʇɹɐW' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'uᴉʇɹɐW' but never did.\n    at Context.eval (https://maricegalla-ft.herokuapp.com/__cypress/tests?p=cypress/integration/herokuDeploy.spec.js:118:34)",
+                "diff": null
+              },
+              "uuid": "66fbcc9f-ce09-48d4-bd15-f06a166be27e",
+              "parentUUID": "03b8c586-5db7-409d-bc33-ea437ead93e8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que os botões de próxima página e página anterior funcionam",
+              "fullTitle": "1 - Verifica se foi feito o deploy do frontend no Heroku Será validado que os botões de próxima página e página anterior funcionam",
+              "timedOut": null,
+              "duration": 2274,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(PESQUISAR).click();\ncy.contains(MARTIN).should(\"exist\");\ncy.contains(\"Próximo\").click();\ncy.contains(\"2\").should(\"exist\");\ncy.contains(Claudia).should(\"exist\");\ncy.contains(\"Anterior\").click();\ncy.contains(\"1\").should(\"exist\");\ncy.contains(MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "6017e923-05cb-4c64-ba6b-91596392face",
+              "parentUUID": "03b8c586-5db7-409d-bc33-ea437ead93e8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "346691ba-6ecd-49d2-b134-3b4c8d2eb3c9",
+            "99157ef7-30a6-44cc-ac3f-5fec0cf584b0",
+            "6017e923-05cb-4c64-ba6b-91596392face"
+          ],
+          "failures": [
+            "66fbcc9f-ce09-48d4-bd15-f06a166be27e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18052,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
