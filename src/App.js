@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // FrontEnd
 import './App.css';
 
 import StrangerThings from './components/StrangerThings';
