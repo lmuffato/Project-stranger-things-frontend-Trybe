@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-// const DEFAULT_TIMEOUT = 30000;
 class CharactersService {
   constructor({ url, timeout }) {
     this.http = axios.create({
