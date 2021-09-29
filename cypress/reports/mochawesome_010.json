@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-09-29T22:01:51.307Z",
+    "end": "2021-09-29T22:01:53.029Z",
+    "duration": 1722,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "b9da5e17-1fb5-4c2c-8585-6a619e412aaf",
+      "title": "",
+      "fullFile": "cypress/integration/herokuDeploy.spec.js",
+      "file": "cypress/integration/herokuDeploy.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "db774f2f-e644-4962-94ad-3f57f2bc46d9",
+          "title": "1 - Verifica se foi feito o deploy do frontend no Heroku",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que o botão de mudar de realidade existe",
+              "fullTitle": "1 - Verifica se foi feito o deploy do frontend no Heroku Será validado que o botão de mudar de realidade existe",
+              "timedOut": null,
+              "duration": 767,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".change-reality\").should(\"exist\");",
+              "err": {
+                "message": "CypressError: The following error originated from your application code, not from Cypress.\n\n  > Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the `crossorigin` attribute and setting a CORS header.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nhttps://on.cypress.io/cross-origin-script-error\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `1 - Verifica se foi feito o...`",
+                "estack": "CypressError: The following error originated from your application code, not from Cypress.\n\n  > Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the `crossorigin` attribute and setting a CORS header.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nhttps://on.cypress.io/cross-origin-script-error\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `1 - Verifica se foi feito o...`\n    at cypressErr (https://vrodriguera-ft.herokuapp.com/__cypress/runner/cypress_runner.js:173124:16)\n    at Object.errByPath (https://vrodriguera-ft.herokuapp.com/__cypress/runner/cypress_runner.js:173179:10)\n    at Object.createUncaughtException (https://vrodriguera-ft.herokuapp.com/__cypress/runner/cypress_runner.js:161752:45)\n    at $Cy.onUncaughtException (https://vrodriguera-ft.herokuapp.com/__cypress/runner/cypress_runner.js:170629:24)\n    at onError (https://vrodriguera-ft.herokuapp.com/__cypress/runner/cypress_runner.js:169690:39)\nFrom Your Spec Code:\n    at Context.eval (https://vrodriguera-ft.herokuapp.com/__cypress/tests?p=cypress/integration/herokuDeploy.spec.js:106:8)",
+                "diff": null
+              },
+              "uuid": "7ecc635f-e7d4-4a9a-852b-d7ee25520577",
+              "parentUUID": "db774f2f-e644-4962-94ad-3f57f2bc46d9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a pesquisa funciona como deveria",
+              "fullTitle": "1 - Verifica se foi feito o deploy do frontend no Heroku Será validado que a pesquisa funciona como deveria",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(PESQUISAR).click();\ncy.contains(MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "81723a65-52cf-437d-9e12-3130461ae6f9",
+              "parentUUID": "db774f2f-e644-4962-94ad-3f57f2bc46d9",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Será validado que o botão de mudar de realidade funciona.",
+              "fullTitle": "1 - Verifica se foi feito o deploy do frontend no Heroku Será validado que o botão de mudar de realidade funciona.",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"Mudar de Realidade\").click();\ncy.contains(PESQUISAR).click();\ncy.contains(INVERTED_MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "5cf4cd08-a5d0-42fb-add6-38d2a79d8c32",
+              "parentUUID": "db774f2f-e644-4962-94ad-3f57f2bc46d9",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Será validado que os botões de próxima página e página anterior funcionam",
+              "fullTitle": "1 - Verifica se foi feito o deploy do frontend no Heroku Será validado que os botões de próxima página e página anterior funcionam",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(PESQUISAR).click();\ncy.contains(MARTIN).should(\"exist\");\ncy.contains(\"Próximo\").click();\ncy.contains(\"2\").should(\"exist\");\ncy.contains(Claudia).should(\"exist\");\ncy.contains(\"Anterior\").click();\ncy.contains(\"1\").should(\"exist\");\ncy.contains(MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "b8ec2ab1-a374-4c3c-ad51-425281d95a44",
+              "parentUUID": "db774f2f-e644-4962-94ad-3f57f2bc46d9",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7ecc635f-e7d4-4a9a-852b-d7ee25520577"
+          ],
+          "pending": [],
+          "skipped": [
+            "81723a65-52cf-437d-9e12-3130461ae6f9",
+            "5cf4cd08-a5d0-42fb-add6-38d2a79d8c32",
+            "b8ec2ab1-a374-4c3c-ad51-425281d95a44"
+          ],
+          "duration": 767,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
