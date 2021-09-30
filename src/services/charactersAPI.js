@@ -1,8 +1,20 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
 
-const DEFAULT_TIMEOUT = 30000;
+dotenv.config();
+
+const {
+  REACT_APP_HAWKINS_URL,
+  REACT_APP_HAWKINS_TIMEOUT,
+  REACT_APP_UPSIDEDOWN_URL,
+  REACT_APP_UPSIDEDOWN_TIMEOUT,
+} = process.env;
+
 class CharactersService {
-  constructor({ url = 'http://localhost:3000', timeout = DEFAULT_TIMEOUT }) {
+  constructor({
+    url = REACT_APP_HAWKINS_URL || REACT_APP_UPSIDEDOWN_URL,
+    timeout = REACT_APP_HAWKINS_TIMEOUT || REACT_APP_UPSIDEDOWN_TIMEOUT,
+  }) {
     this.http = axios.create({
       baseURL: url,
       timeout,
