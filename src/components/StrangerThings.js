@@ -107,7 +107,7 @@ class StrangerThings extends React.Component {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
-    const { REACT_APP_DEVELOPMENT } = process.env;
+    // const { REACT_APP_DEVELOPMENT } = process.env;
     return (
       <div
         className={ `reality ${getRealityClass(
@@ -147,7 +147,7 @@ class StrangerThings extends React.Component {
           </div>
         </div>
         {
-          REACT_APP_DEVELOPMENT === 'true' && <p>Em desenvolvimento</p>
+          process.env.REACT_APP_DEVELOPMENT === 'true' && <p>Em desenvolvimento</p>
         }
 
       </div>
