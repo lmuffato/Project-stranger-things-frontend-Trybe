@@ -6,9 +6,9 @@
 .pnp.js
 .vscode
 
-
 # testing
 /coverage
+*cypress/reports/
 
 # production
 /build
