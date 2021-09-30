@@ -99,3 +99,12 @@
   width: 900px;
   text-align: left;
 }
+
+.mode span {
+  background: none;
+  color: #fff;
+  display: flex;
+  font-family: monospace;
+  font-style: italic;
+  justify-content: center;
+}
