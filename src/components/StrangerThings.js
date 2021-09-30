@@ -21,7 +21,7 @@ const upsideDownConfig = {
   timeout: REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
-console.log('Opa');
+console.log(REACT_APP_HAWKINS_URL);
 
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
