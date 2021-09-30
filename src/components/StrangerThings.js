@@ -151,4 +151,3 @@ class StrangerThings extends React.Component {
 }
 
 export default StrangerThings;
-// primeiro commit
