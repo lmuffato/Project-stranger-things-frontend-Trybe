@@ -120,8 +120,8 @@ class StrangerThings extends React.Component {
       <div
         className={ `reality ${getRealityClass(
           hereIsTheUpsideDownWorld,
-          )}` }
-          >
+        )}` }
+      >
         <div className="content strangerfy">
           <div className="change-reality">
             <p>Em desenvolvimento</p>
@@ -136,7 +136,7 @@ class StrangerThings extends React.Component {
               placeholder="Nome do Personagem"
               onChange={ this.handleInput }
               value={ characterName }
-              />
+            />
             <button type="button" onClick={ this.searchClick }>Pesquisar</button>
           </div>
 
