@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-10-01T10:57:05.205Z",
+    "end": "2021-10-01T10:57:27.210Z",
+    "duration": 22005,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "263d1de6-feca-45ff-97ba-6dc503dceeba",
+      "title": "",
+      "fullFile": "cypress/integration/developerMode.spec.js",
+      "file": "cypress/integration/developerMode.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "02230a23-2fad-40d9-a0c8-e1808724b27a",
+          "title": "3 - Verifica os multi-ambientes e modo de desenvolvimento",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "timedOut": null,
+              "duration": 12383,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL);\ncy.contains(\"Em desenvolvimento\").should(\"exist\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Em desenvolvimento' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Em desenvolvimento' but never did.\n    at Context.eval (https://michael-petterson-06-ft.herokuapp.com/__cypress/tests?p=cypress/integration/developerMode.spec.js:104:39)",
+                "diff": null
+              },
+              "uuid": "a8df833d-c893-4df3-b35c-65d475b43edd",
+              "parentUUID": "02230a23-2fad-40d9-a0c8-e1808724b27a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "timedOut": null,
+              "duration": 784,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL_PROD);\ncy.contains(\"Em desenvolvimento\").should(\"not.exist\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://michael-petterson-06-pd.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://michael-petterson-06-pd.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:158062:25\n    at visitFailedByErr (https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:157432:12)\n    at https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:158042:13\n    at tryCatcher (https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://michael-petterson-06-ft.herokuapp.com/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (https://michael-petterson-06-ft.herokuapp.com/__cypress/tests?p=cypress/integration/developerMode.spec.js:107:8)",
+                "diff": null
+              },
+              "uuid": "65120cc9-8a80-4661-97e7-b933abfae812",
+              "parentUUID": "02230a23-2fad-40d9-a0c8-e1808724b27a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a8df833d-c893-4df3-b35c-65d475b43edd",
+            "65120cc9-8a80-4661-97e7-b933abfae812"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13167,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
