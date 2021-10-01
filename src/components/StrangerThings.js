@@ -7,13 +7,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url: 'https://scriptcamilo-bk.herokuapp.com/',
+  timeout: +process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: 'https://scriptcamilo-bd.herokuapp.com/',
+  timeout: +process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -30,6 +30,8 @@ class StrangerThings extends React.Component {
       page: 1,
     };
 
+    this.setCharacters = this.setCharacters.bind(this);
+
     this.handleInput = this.handleInput.bind(this);
     this.changeRealityClick = this.changeRealityClick.bind(this);
 
@@ -40,17 +42,33 @@ class StrangerThings extends React.Component {
     this.previousPage = this.previousPage.bind(this);
   }
 
+  async componentDidMount() {
+    const characters = await charactersService.getCharacters();
+    this.setCharacters(characters.data);
+  }
+
+  setCharacters(characters) {
+    this.setState({
+      characters,
+    });
+  }
+
   handleInput(event) {
     this.setState({
       characterName: event.target.value,
     });
   }
 
-  changeRealityClick() {
+  async changeRealityClick() {
     const { hereIsTheUpsideDownWorld } = this.state;
+    const service = !hereIsTheUpsideDownWorld
+      ? charactersUpsideDownService
+      : charactersService;
+    const { data } = await service.getCharacters();
+
     this.setState({
       hereIsTheUpsideDownWorld: !hereIsTheUpsideDownWorld,
-      characters: [],
+      characters: data,
     });
   }
 
@@ -72,11 +90,7 @@ class StrangerThings extends React.Component {
     const numberOfPages = 10;
     service
       .getCharacters(characterName, pages || page, numberOfPages)
-      .then(({ data: characters }) => {
-        this.setState({
-          characters,
-        });
-      });
+      .then(({ data: characters }) => this.setCharacters(characters));
   }
 
   nextPage() {
