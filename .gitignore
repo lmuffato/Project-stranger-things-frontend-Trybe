@@ -5,7 +5,6 @@
 /.pnp
 .pnp.js
 .vscode
-.env
 
 
 # testing
@@ -13,6 +12,7 @@
 
 # production
 /build
+.env
 
 # misc
 .DS_Store
