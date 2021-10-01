@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-10-01T12:01:45.333Z",
+    "end": "2021-10-01T12:02:19.404Z",
+    "duration": 34071,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "760067e5-f864-4427-aaa7-f17b071842c3",
+      "title": "",
+      "fullFile": "cypress/integration/developerMode.spec.js",
+      "file": "cypress/integration/developerMode.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b45978fd-a008-459f-895e-07def89a80f6",
+          "title": "3 - Verifica os multi-ambientes e modo de desenvolvimento",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "timedOut": null,
+              "duration": 33058,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL);\ncy.contains(\"Em desenvolvimento\").should(\"exist\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://flavio92ux-ft.herokuapp.com/.\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://flavio92ux-ft.herokuapp.com/.\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at http://localhost:38643/__cypress/runner/cypress_runner.js:158078:23\n    at visitFailedByErr (http://localhost:38643/__cypress/runner/cypress_runner.js:157432:12)\n    at http://localhost:38643/__cypress/runner/cypress_runner.js:158077:11\n    at tryCatcher (http://localhost:38643/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (http://localhost:38643/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (http://localhost:38643/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (http://localhost:38643/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (http://localhost:38643/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (http://localhost:38643/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (http://localhost:38643/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:38643/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (http://localhost:38643/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:38643/__cypress/tests?p=cypress/integration/developerMode.spec.js:103:8)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (/home/flavio/.cache/Cypress/5.1.0/Cypress/resources/app/packages/server/node_modules/@cypress/request/request.js:816:19)\n      at Object.onceWrapper (events.js:312:28)\n      at ClientRequest.emit (events.js:223:5)\n      at TLSSocket.emitRequestTimeout (_http_client.js:690:9)\n      at Object.onceWrapper (events.js:312:28)\n      at TLSSocket.emit (events.js:223:5)\n      at TLSSocket.Socket._onTimeout (net.js:474:8)\n      at listOnTimeout (internal/timers.js:531:17)\n      at processTimers (internal/timers.js:475:7)\n  ",
+                "diff": null
+              },
+              "uuid": "590d5a0a-21dc-4dfe-a66b-a250866781c5",
+              "parentUUID": "b45978fd-a008-459f-895e-07def89a80f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "timedOut": null,
+              "duration": 937,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL_PROD);\ncy.contains(\"Em desenvolvimento\").should(\"not.exist\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://flavio92ux-pd.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://flavio92ux-pd.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at http://localhost:38643/__cypress/runner/cypress_runner.js:158062:25\n    at visitFailedByErr (http://localhost:38643/__cypress/runner/cypress_runner.js:157432:12)\n    at http://localhost:38643/__cypress/runner/cypress_runner.js:158042:13\n    at tryCatcher (http://localhost:38643/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (http://localhost:38643/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (http://localhost:38643/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (http://localhost:38643/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (http://localhost:38643/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (http://localhost:38643/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (http://localhost:38643/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:38643/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (http://localhost:38643/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:38643/__cypress/tests?p=cypress/integration/developerMode.spec.js:107:8)",
+                "diff": null
+              },
+              "uuid": "afc13152-c565-48dd-be20-4fc691bc0719",
+              "parentUUID": "b45978fd-a008-459f-895e-07def89a80f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "590d5a0a-21dc-4dfe-a66b-a250866781c5",
+            "afc13152-c565-48dd-be20-4fc691bc0719"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 33995,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
