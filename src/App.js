@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import StrangerThings from './components/StrangerThings';
 
-require();
-
 // SOURCE:
 // Renzo Sevilha
 // https://github.com/tryber/sd-010-a-stranger-things-frontend/pull/53/commits/dc9f3abb78c644978789928b63e6b5e0244a60c6
