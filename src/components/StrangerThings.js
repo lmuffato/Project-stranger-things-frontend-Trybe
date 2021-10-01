@@ -7,12 +7,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'https://scriptcamilo-bk.herokuapp.com/',
+  url: process.env.REACT_APP_HAWKINS_URL,
   timeout: +process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: 'https://scriptcamilo-bd.herokuapp.com/',
+  url: process.env.REACT_APP_UPSIDEDOWN_URL,
   timeout: +process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
@@ -118,6 +118,9 @@ class StrangerThings extends React.Component {
   }
 
   render() {
+    const isDevelopmentMode = process.env.REACT_APP_DEVELOPMENT === 'true';
+    console.log(process.env);
+    console.log(process.env.DEVELOPMENT_MODE);
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
@@ -128,6 +131,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
+          { isDevelopmentMode ? <h1 className="development">Em desenvolvimento</h1> : '' }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
