@@ -119,8 +119,6 @@ class StrangerThings extends React.Component {
 
   render() {
     const isDevelopmentMode = process.env.REACT_APP_DEVELOPMENT === 'true';
-    console.log(process.env);
-    console.log(process.env.DEVELOPMENT_MODE);
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
