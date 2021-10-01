@@ -4,7 +4,7 @@ const INVERTED_MARTIN = "uᴉʇɹɐW";
 const FRONT_URL = `https://${Cypress.env('GITHUB_USER')}-ft.herokuapp.com/.`
 const Claudia = "Claudia"
 
-describe("1 - Verifica se foi feito o deploy do frontend no Heroku", () => {
+describe.skip("1 - Verifica se foi feito o deploy do frontend no Heroku", () => {
   beforeEach(() => {
     cy.visit(FRONT_URL);
   });
