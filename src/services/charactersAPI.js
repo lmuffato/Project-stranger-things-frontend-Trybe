@@ -5,7 +5,7 @@ class CharactersService {
   constructor({ url, timeout = DEFAULT_TIMEOUT }) {
     this.http = axios.create({
       baseURL: url,
-      timeout,
+      timeout: Number(timeout),
     });
   }
 

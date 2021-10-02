@@ -6,14 +6,16 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
+const possibleTimeout = 30000;
+
 const strangerThingsConfig = {
-  url: process.env.HAWKINS || 'https://gui-lira-bk.herokuapp.com/',
-  timeout: 30000,
+  url: process.env.REACT_APP_HAWKINS_URL || 'https://gui-lira-bk.herokuapp.com/',
+  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT || possibleTimeout,
 };
 
 const upsideDownConfig = {
-  url: process.env.UPSIDEDOWN || 'https://gui-lira-bd.herokuapp.com/',
-  timeout: 30000,
+  url: process.env.REACT_APP_UPSIDEDOWN_URL || 'https://gui-lira-bd.herokuapp.com/',
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT || possibleTimeout,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
