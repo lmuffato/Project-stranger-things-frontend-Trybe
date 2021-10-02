@@ -7,12 +7,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
+  url: process.env.HAWKINS,
   timeout: 30000,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
+  url: process.env.UPSIDEDOWN,
   timeout: 30000,
 };
 
