@@ -7,12 +7,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: process.env.HAWKINS,
+  url: process.env.HAWKINS || 'https://gui-lira-bk.herokuapp.com/',
   timeout: 30000,
 };
 
 const upsideDownConfig = {
-  url: process.env.UPSIDEDOWN,
+  url: process.env.UPSIDEDOWN || 'https://gui-lira-bd.herokuapp.com/',
   timeout: 30000,
 };
 
