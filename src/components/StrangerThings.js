@@ -120,6 +120,9 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
+          {
+            process.env.MODE === true && <p>Em desenvolvimento</p>
+          }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
