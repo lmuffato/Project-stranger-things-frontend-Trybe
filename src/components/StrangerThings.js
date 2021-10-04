@@ -5,7 +5,7 @@ import Table from './Table';
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
-// teste só pra saber se está tudo certo, agora está tudo acordado
+// teste só pra saber se está tudo certo, agora está com o buildpack
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
