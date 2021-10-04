@@ -13,12 +13,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 
 const strangerThingsConfig = {
   url: REACT_APP_HAWKINS_URL,
-  timeout: REACT_APP_HAWKINS_TIMEOUT,
+  timeout: parseInt(REACT_APP_HAWKINS_TIMEOUT, 0),
 };
 
 const upsideDownConfig = {
   url: REACT_APP_UPSIDEDOWN_URL,
-  timeout: REACT_APP_UPSIDEDOWN_TIMEOUT,
+  timeout: parseInt(REACT_APP_UPSIDEDOWN_TIMEOUT, 0),
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
