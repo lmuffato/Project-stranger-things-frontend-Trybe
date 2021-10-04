@@ -121,6 +121,8 @@ class StrangerThings extends React.Component {
             </button>
           </div>
 
+          <p>Em desenvolvimento</p>
+
           <div>
             <input
               placeholder="Nome do Personagem"
