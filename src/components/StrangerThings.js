@@ -2,9 +2,15 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
+require('dotenv').config();
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
+
+const isDevMode = process.env.REACT_APP_DEVELOPMENT_MODE === 'true';
+
+console.log(process.env.REACT_APP_DEVELOPMENT_MODE);
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
@@ -107,7 +113,6 @@ class StrangerThings extends React.Component {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
-    const isDevMode = process.env.DEVELOPMENT_MODE === 'true';
     console.log('está no ambiente de desenvolvimento? ', isDevMode);
     return (
       <div
