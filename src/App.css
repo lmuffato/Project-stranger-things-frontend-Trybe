@@ -99,3 +99,12 @@
   width: 900px;
   text-align: left;
 }
+
+.dev-tag {
+  align-items: center;
+  color: red;
+  display: flex;
+  font-size: larger;
+  font-weight: bold;
+  justify-content: center;
+}
