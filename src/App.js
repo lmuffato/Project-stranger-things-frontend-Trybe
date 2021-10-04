@@ -6,6 +6,7 @@ import StrangerThings from './components/StrangerThings';
 function App() {
   return (
     <div className="App">
+      <span>Em desenvolvimento</span>
       <StrangerThings />
     </div>
   );
