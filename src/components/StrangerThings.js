@@ -10,8 +10,6 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 
 const isDevMode = process.env.REACT_APP_DEVELOPMENT_MODE === 'true';
 
-console.log(process.env.REACT_APP_DEVELOPMENT_MODE);
-
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
@@ -113,7 +111,6 @@ class StrangerThings extends React.Component {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
-    console.log('está no ambiente de desenvolvimento? ', isDevMode);
     return (
       <div
         className={ `reality ${getRealityClass(
