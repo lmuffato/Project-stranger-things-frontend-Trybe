@@ -3,16 +3,16 @@ import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
-  hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
+  hereIsTheUpsideDownWorld === 'true' ? 'upside-down' : 'stranger-things'
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
+  url: 'https://luizfelipe-dev-bk.herokuapp.com/',
   timeout: 30000,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
+  url: 'https://luizfelipe-dev-bd.herokuapp.com/',
   timeout: 30000,
 };
 
