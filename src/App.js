@@ -7,6 +7,7 @@ require('dotenv').config();
 
 function App() {
   const mode = process.env.REACT_APP_DEV_MODE;
+
   console.log(process.env);
   return (
     <div className="App">
