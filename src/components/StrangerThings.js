@@ -121,7 +121,7 @@ class StrangerThings extends React.Component {
             </button>
           </div>
           <div className="content strangerfy">
-            <span>Em Desenvolvimento</span>
+            <p value="Em Desenvolvimento">Em Desenvolvimento</p>
           </div>
 
           <div>
