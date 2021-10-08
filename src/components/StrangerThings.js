@@ -18,6 +18,8 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
+const enviromentMode = process.env.ENVIRONMENT || true;
+
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
@@ -110,11 +112,7 @@ class StrangerThings extends React.Component {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
     return (
-      <div
-        className={ `reality ${getRealityClass(
-          hereIsTheUpsideDownWorld,
-        )}` }
-      >
+      <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
@@ -129,10 +127,13 @@ class StrangerThings extends React.Component {
               onChange={ this.handleInput }
               value={ characterName }
             />
-            <button type="button" onClick={ this.searchClick }>Pesquisar</button>
+            <button type="button" onClick={ this.searchClick }>
+              Pesquisar
+            </button>
           </div>
 
           <div>
+            {enviromentMode && (<h4>Em desenvolvimento</h4>)}
             <Table characters={ characters } />
           </div>
 
@@ -143,8 +144,12 @@ class StrangerThings extends React.Component {
             </p>
           </div>
           <div>
-            <button type="button" onClick={ this.previousPage }>Anterior</button>
-            <button type="button" onClick={ this.nextPage }>Próximo</button>
+            <button type="button" onClick={ this.previousPage }>
+              Anterior
+            </button>
+            <button type="button" onClick={ this.nextPage }>
+              Próximo
+            </button>
           </div>
         </div>
       </div>
