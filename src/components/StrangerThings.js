@@ -18,7 +18,7 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
-const enviromentMode = process.env.ENVIRONMENT || true;
+// const enviromentMode = process.env.ENVIRONMENT || true;
 
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
@@ -133,7 +133,6 @@ class StrangerThings extends React.Component {
           </div>
 
           <div>
-            {enviromentMode && (<h4>Em desenvolvimento</h4>)}
             <Table characters={ characters } />
           </div>
 
