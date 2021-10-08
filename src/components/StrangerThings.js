@@ -2,6 +2,7 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
+// dotenv
 require('dotenv').config();
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
