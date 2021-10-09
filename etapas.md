@@ -12,14 +12,9 @@ heroku create -b mars/<nomeAplicacao>
 heroku create -b mars/lmuffato-ft
 
 3. Fazendo push da aplicação
-git add .; git commit -m "aplicacao heroku";git push lmuffato-sd-010-a-stranger-things-frontend heroku master
- git push heroku (lmuffato-sd-010-a-stranger-things-frontend):master
-heroku create --buildpack https://github.com/mars/create-react-app-inner-buildpack.git
-heroku git:remote -a dry-ocean-32550
+heroku create -b mars/create-react-app
 
-heroku create lmuffato-ft --buildpack mars/create-react-app
-
+git add .; git commit -m "aplicacao heroku";
 git push heroku lmuffato-sd-010-a-stranger-things-frontend:master
 
-
-heroku create -b mars/create-react-app
+heroku create lmuffato-ft --buildpack mars/create-react-app
