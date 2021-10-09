@@ -18,7 +18,8 @@ heroku config:set REACT_APP_DEV_MODE="true" --app lmuffato-pd;
 2. Criar o buildpack para o react
 heroku create -b mars/<nomeAplicacao>
 
-heroku create --buildpack mars/lmuffato-pd
+heroku create development -b mars/lmuffato-pd
+heroku create --buildpack mars/create-react-app
 heroku create development -b mars/lmuffato-pd
 
 3. Fazendo push da aplicação
