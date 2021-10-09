@@ -16,3 +16,10 @@ git add .; git commit -m "aplicacao heroku";git push lmuffato-sd-010-a-stranger-
  git push heroku (lmuffato-sd-010-a-stranger-things-frontend):master
 heroku create --buildpack https://github.com/mars/create-react-app-inner-buildpack.git
 heroku git:remote -a dry-ocean-32550
+
+heroku create lmuffato-ft --buildpack mars/create-react-app
+
+git push heroku lmuffato-sd-010-a-stranger-things-frontend:master
+
+
+heroku create -b mars/create-react-app
