@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-09T01:54:04.867Z",
+    "end": "2021-10-09T01:54:04.935Z",
+    "duration": 68,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bd716bd3-2034-4ed8-87d9-9e2f8af12cd8",
+      "title": "",
+      "fullFile": "cypress/integration/VerifyEnv.spec.js",
+      "file": "cypress/integration/VerifyEnv.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2c95f5ef-cb80-498c-9066-15287b28c12c",
+          "title": "2 - Verifica as variáveis de ambiente do frontend",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado se as variáveis do hawkins existem",
+              "fullTitle": "2 - Verifica as variáveis de ambiente do frontend Será validado se as variáveis do hawkins existem",
+              "timedOut": null,
+              "duration": 34,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(Cypress.env(REACT_APP_HAWKINS_URL)).to.exist;\nexpect(Cypress.env(REACT_APP_HAWKINS_TIMEOUT)).to.exist;",
+              "err": {},
+              "uuid": "5cdd0b76-1561-4596-b278-009e6c1518ee",
+              "parentUUID": "2c95f5ef-cb80-498c-9066-15287b28c12c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado se as variáveis do upsidesown existem",
+              "fullTitle": "2 - Verifica as variáveis de ambiente do frontend Será validado se as variáveis do upsidesown existem",
+              "timedOut": null,
+              "duration": 18,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(Cypress.env(REACT_APP_UPSIDEDOWN_URL)).to.exist;\nexpect(Cypress.env(REACT_APP_UPSIDEDOWN_TIMEOUT)).to.exist;",
+              "err": {},
+              "uuid": "1abe1515-1a46-46d7-950e-3a50eb41cba6",
+              "parentUUID": "2c95f5ef-cb80-498c-9066-15287b28c12c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5cdd0b76-1561-4596-b278-009e6c1518ee",
+            "1abe1515-1a46-46d7-950e-3a50eb41cba6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
