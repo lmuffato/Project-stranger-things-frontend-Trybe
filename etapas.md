@@ -18,9 +18,15 @@ heroku config:set REACT_APP_DEV_MODE="true" --app lmuffato-pd;
 2. Criar o buildpack para o react
 heroku create -b mars/<nomeAplicacao>
 
-heroku create development -b mars/lmuffato-pd
 heroku create --buildpack mars/create-react-app
-heroku create development -b mars/lmuffato-pd
+
+// Nomeando repositorio
+heroku apps:rename lmuffato-pd
+
+// Nomeando um remote
+git remote rename heroku development
+
+git remote rename heroku development
 
 3. Fazendo push da aplicação
 git add .; git commit -m "aplicacao heroku";
@@ -34,7 +40,7 @@ heroku create lmuffato-pd --remote development
 4. 2. Fazendo push por ambiente
 git push heroku-<nomeDoRemote> <nomeDaBranchDoGitHub>-:master
 
-git push development lmuffato-sd-010-a-stranger-things-frontend:master
+git push heroku lmuffato-sd-010-a-stranger-things-frontend:master
 
 ### Excluindo apps do heroku
 heroku apps:destroy lmuffato-pd
