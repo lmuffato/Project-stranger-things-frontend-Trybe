@@ -18,3 +18,19 @@ git add .; git commit -m "aplicacao heroku";
 git push heroku lmuffato-sd-010-a-stranger-things-frontend:master
 
 heroku create lmuffato-ft --buildpack mars/create-react-app
+
+4. Criando ambiente de desenvolvimento
+4. 1.  Criando ambientes diferentes (remote) a partir de uma aplicação existente
+heroku create lmuffato-pd --remote development
+
+4. 2. Fazendo push por ambiente
+git push heroku-<nomeDoRemote> <nomeDaBranchDoGitHub>-things-backend:master
+
+git push development lmuffato-sd-010-a-stranger-things-backend:master
+
+5. Renoemando o remote
+git remote rename heroku <nomeDoRemote>
+
+git remote rename heroku heroku-origin
+
+git remote rename heroku hawkins
