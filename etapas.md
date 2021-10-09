@@ -30,7 +30,7 @@ git remote rename heroku development
 
 3. Fazendo push da aplicação
 git add .; git commit -m "aplicacao heroku";
-git push heroku lmuffato-sd-010-a-stranger-things-frontend:master
+git push development lmuffato-sd-010-a-stranger-things-frontend:master
 
 
 4. Criando ambiente de desenvolvimento
@@ -38,7 +38,7 @@ git push heroku lmuffato-sd-010-a-stranger-things-frontend:master
 heroku create lmuffato-pd --remote development
 
 4. 2. Fazendo push por ambiente
-git push heroku-<nomeDoRemote> <nomeDaBranchDoGitHub>-:master
+git push <nomeDoRemote> <nomeDoRemote> <nomeDaBranchDoGitHub>-:master
 
 git push heroku lmuffato-sd-010-a-stranger-things-frontend:master
 
