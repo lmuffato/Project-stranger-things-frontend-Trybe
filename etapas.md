@@ -26,7 +26,7 @@ heroku create lmuffato-pd --remote development
 4. 2. Fazendo push por ambiente
 git push heroku-<nomeDoRemote> <nomeDaBranchDoGitHub>-things-backend:master
 
-git push development lmuffato-sd-010-a-stranger-things-backend:master
+git push development lmuffato-sd-010-a-stranger-things-frontend:master
 
 5. Renoemando o remote
 git remote rename heroku <nomeDoRemote>
@@ -34,3 +34,5 @@ git remote rename heroku <nomeDoRemote>
 git remote rename heroku heroku-origin
 
 git remote rename heroku hawkins
+
+heroku git:remote -a lmuffato-pd

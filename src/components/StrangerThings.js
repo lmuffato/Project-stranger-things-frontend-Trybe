@@ -107,6 +107,13 @@ class StrangerThings extends React.Component {
     );
   }
 
+  // Verifica se a aplicação está rodando no modo desenvolvimento
+  devMode() {
+    if (process.env.REACT_APP_DEV_MODE === true) {
+      return (<div>Em desenvolvimento</div>);
+    }
+  }
+
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
@@ -124,7 +131,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-
+          <div>{ this.devMode() }</div>
           <div>
             <input
               placeholder="Nome do Personagem"
