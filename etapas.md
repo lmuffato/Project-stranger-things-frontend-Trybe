@@ -25,13 +25,11 @@ heroku apps:rename lmuffato-pd
 
 // Nomeando um remote
 git remote rename heroku development
-
 git remote rename heroku development
 
 3. Fazendo push da aplicação
 git add .; git commit -m "aplicacao heroku";
 git push development lmuffato-sd-010-a-stranger-things-frontend:master
-
 
 4. Criando ambiente de desenvolvimento
 4. 1.  Criando ambientes diferentes (remote) a partir de uma aplicação existente
@@ -52,4 +50,5 @@ git remote rename heroku heroku-origin
 
 git remote rename heroku hawkins
 
+// Selecionando a aplicação
 heroku git:remote -a lmuffato-pd
