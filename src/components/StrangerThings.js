@@ -9,9 +9,8 @@ const { REACT_APP_HAWKINS_URL,
   REACT_APP_UPSIDEDOWN_URL,
   REACT_APP_UPSIDEDOWN_TIMEOUT } = process.env;
 
-const getRealityClass = (hereIsTheUpsideDownWorld) => (
-  hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
-);
+const getRealityClass = (hereIsTheUpsideDownWorld) => (hereIsTheUpsideDownWorld
+  ? 'upside-down' : 'stranger-things');
 
 const strangerThingsConfig = {
   url: REACT_APP_HAWKINS_URL,
