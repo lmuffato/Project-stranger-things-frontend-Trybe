@@ -4,10 +4,9 @@ import StrangerThings from './components/StrangerThings';
 
 require('dotenv').config();
 
-const appInDev = !!process.env.REACT_APP_DEV_ENVIRONMENT;
+const appInDev = !process.env.REACT_APP_DEV_ENVIRONMENT;
 const inDevFlag = () => <h1>Em desenvolvimento</h1>;
 
-console.log(appInDev);
 function App() {
   return (
     <div className="App">
