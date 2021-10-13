@@ -3,12 +3,11 @@ import './App.css';
 
 require('dotenv').config();
 
-const appInDev = process.env.DEV_ENVIRONMENT === 'true';
-const inDevFlag = () => {
-  <h1>Em desenvolvimento</h1>
-};
-
 import StrangerThings from './components/StrangerThings';
+
+const appInDev = process.env.DEV_ENVIRONMENT === 'true';
+const inDevFlag = () => <h1>Em desenvolvimento</h1>;
+
 
 function App() {
   return (
