@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-10-13T01:08:46.924Z",
+    "end": "2021-10-13T01:09:15.352Z",
+    "duration": 28428,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "59685c69-5808-4d73-b4f0-00d1310fc14e",
+      "title": "",
+      "fullFile": "cypress/integration/developerMode.spec.js",
+      "file": "cypress/integration/developerMode.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6e0d2638-2b68-4717-b2ff-5c55f77fda7c",
+          "title": "3 - Verifica os multi-ambientes e modo de desenvolvimento",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "timedOut": null,
+              "duration": 12172,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL);\ncy.contains(\"Em desenvolvimento\").should(\"exist\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Em desenvolvimento' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Em desenvolvimento' but never did.\n    at Context.eval (https://peryclesreis-ft.herokuapp.com/__cypress/tests?p=cypress/integration/developerMode.spec.js:104:39)",
+                "diff": null
+              },
+              "uuid": "23593d06-d0e4-4d1b-8668-e049eeb2c5e7",
+              "parentUUID": "6e0d2638-2b68-4717-b2ff-5c55f77fda7c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "timedOut": null,
+              "duration": 12166,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL_PROD);\ncy.contains(\"Em desenvolvimento\").should(\"not.exist\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected not to find content: 'Em desenvolvimento' but continuously found it.",
+                "estack": "AssertionError: Timed out retrying: Expected not to find content: 'Em desenvolvimento' but continuously found it.\n    at Context.eval (https://peryclesreis-pd.herokuapp.com/__cypress/tests?p=cypress/integration/developerMode.spec.js:108:39)",
+                "diff": null
+              },
+              "uuid": "a7b27445-b7bb-4a09-a34c-693ca16129b1",
+              "parentUUID": "6e0d2638-2b68-4717-b2ff-5c55f77fda7c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "23593d06-d0e4-4d1b-8668-e049eeb2c5e7",
+            "a7b27445-b7bb-4a09-a34c-693ca16129b1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 24338,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
