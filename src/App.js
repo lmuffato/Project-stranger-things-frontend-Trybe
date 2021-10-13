@@ -5,7 +5,7 @@ import StrangerThings from './components/StrangerThings';
 
 require('dotenv').config();
 
-const devVar = !process.env.ENVIROMENT_VAR;
+const devVar = process.env.ENVIROMENT_VAR === 'false';
 const flag = () => <h1>Em desenvolvimento</h1>;
 
 function App() {
