@@ -1,0 +1,13 @@
+apps: 
+
+- name: 'app'
+  script: './index.js'
+  exec_mode: cluster
+  env_prod:
+    ENVIRONMENT: PRODUCTION 
+  env_homolog:
+    ENVIRONMENT: HOMOLOG 
+  instances: 4
+    
+  
+
