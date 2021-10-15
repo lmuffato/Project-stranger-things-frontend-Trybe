@@ -106,7 +106,7 @@ class StrangerThings extends React.Component {
   }
 
   DevEnviorement() {
-    if (process.env.DEVENV === 'true') {
+    if (process.env.DEVENV === true) {
       return <h1>Em desenvolvimento</h1>;
     }
     return ('');
@@ -122,8 +122,9 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
-        <div>
+        <div className="enviorement">
           { this.DevEnviorement() }
+          {' '}
         </div>
         <div className="content strangerfy">
           <div className="change-reality">
