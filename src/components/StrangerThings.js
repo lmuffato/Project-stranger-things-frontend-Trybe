@@ -123,8 +123,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="enviorement">
-          { this.DevEnviorement() }
-          {' '}
+          <h1> Em desenvolvimento </h1>
         </div>
         <div className="content strangerfy">
           <div className="change-reality">
